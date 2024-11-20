@@ -1,0 +1,25 @@
+{
+  "name": "gate-2025-countdown",
+  "version": "1.0.0",
+  "description": "Countdown to GATE 2025 Exam",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.yourname.gate-countdown",
+    "productName": "GATE 2025 Countdown",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "keywords": ["electron", "countdown", "gate"],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest"
+  }
+}

@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #5865F2;  /* Discord Blurple */
+    --secondary-color: #57F287;  /* Spotify Green */
+    --background-color: #2C2F33;
+    --text-color: #FFFFFF;
+    --accent-color: #FF7F50;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #1A1A2E, #16213E, #0F3460);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--text-color);
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    width: 80%;
+    max-width: 350px;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    color: white;  /* Changed to white */
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);  /* Added glow effect */
+}
+
+.countdown {
+    font-size: 72px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(87, 242, 135, 0.5);
+}
+
+.motivation {
+    font-style: normal;
+    font-size: 18px;
+    padding: 15px;
+    background: linear-gradient(135deg, #8A4FFF, #FF4F8B);
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(142, 79, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.motivation::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(-45deg);
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(-45deg) translate(-100%, -100%);
+    }
+    100% {
+        transform: rotate(-45deg) translate(100%, 100%);
+    }
+}
+
+.motivation:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(142, 79, 255, 0.5);
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .countdown {
+        font-size: 58px;
+    }
+
+    .motivation {
+        font-size: 16px;
+    }
+}
